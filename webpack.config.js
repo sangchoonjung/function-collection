@@ -27,7 +27,7 @@ module.exports = (env, argv) => {
 
     module: {
       rules: [
-        { test: /\.css$/, use: ["style-loader", "css-loader"] }, // CSS 파일 처리
+        { test: /\.css$/, use: ["style-loader", "css-loader", "postcss-loader"] }, // CSS 파일 처리
         { test: /\.(png|svg|jpg|jpeg|gif)$/i, type: "asset/resource" },
         {
           test: /\.(ts|tsx)?$/,
