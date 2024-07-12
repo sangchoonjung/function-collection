@@ -1,6 +1,6 @@
 type Props = React.HTMLAttributes<HTMLDivElement> & {
   children?: React.ReactNode;
-  height?: string | number;
+  height?: number | string;
   //   justifyContent?: "center" | "flex-start" | "flex-end" | "space-between" | "space-around" | "space-evenly" | "stretch";
   //   alignItems?: "center" | "flex-start" | "flex-end" | "stretch";
   //   flexBasis?: number | string;
@@ -11,5 +11,11 @@ type Props = React.HTMLAttributes<HTMLDivElement> & {
 };
 
 export default function Row(props: Props) {
-  return <div {...props}>{props.children}</div>;
+  const classeswwww = ["bg-green", "flex-row", "flex", "flex-auto"].join(" ");
+
+  return (
+    <div className={`${classeswwww}`} style={{ ...props.style }}>
+      {props.children}
+    </div>
+  );
 }

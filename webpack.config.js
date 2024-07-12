@@ -15,10 +15,17 @@ module.exports = (env, argv) => {
       path: path.resolve(__dirname, "dist"),
       filename: "[name].js",
       clean: true,
+      // publicPath: "/",
     },
     devServer: {
       static: "./dist", // devServer에서 실행할 html이 있는 경로
+      host: "localhost",
       port: 3000,
+      historyApiFallback: {
+        disableDotRule: true,
+      },
+      open: true,
+      // allowedHosts: "all",
       hot: true,
     },
     resolve: {
@@ -27,7 +34,7 @@ module.exports = (env, argv) => {
 
     module: {
       rules: [
-        { test: /\.css$/, use: ["style-loader", "css-loader", "postcss-loader"] }, // CSS 파일 처리
+        { test: /\.css$/, use: ["style-loader", "css-loader"] }, // CSS 파일 처리
         { test: /\.(png|svg|jpg|jpeg|gif)$/i, type: "asset/resource" },
         {
           test: /\.(ts|tsx)?$/,
