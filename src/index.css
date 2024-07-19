@@ -1,5 +1,9 @@
 #root {
   --color-title: purple;
+  --color-brand: purple;
+  --z-popover: 60;
+  --color-background: #f0f0f0;
+  --color-text: black;
 }
 /* 기본 스타일 */
 /* body {
