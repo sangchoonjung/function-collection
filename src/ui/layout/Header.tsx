@@ -1,25 +1,17 @@
-import { useNavigate, useNavigation } from "react-router-dom";
-import Col from "../common/Col";
+import { useNavigate } from "react-router-dom";
 import Row from "../common/Row";
 import Logo from "./Logo";
 import styled from "styled-components";
 import Tooltip from "../common/Tooltip";
+import { navbar } from "../../data/Dummy";
 
 type Props = {};
-export const navbar = [
-  { title: "Home", path: "/" },
-  { title: "About", path: "/about" },
-  { title: "Contact", path: "/contact" },
-  { title: "Blog", path: "/blog" },
-  { title: "Portfolio", path: "/portfolio" },
-  { title: "Services", path: "/services" },
-  { title: "Team", path: "/team" },
-];
+
 function Header() {
   const navigate = useNavigate();
 
   const onClick = (path: string) => {
-    const a = navigate(path);
+    navigate(path);
   };
   return (
     <Row style={{ height: "70px" }}>

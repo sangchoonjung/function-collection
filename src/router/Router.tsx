@@ -1,5 +1,5 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Header, { navbar } from "../ui/layout/Header";
+import { Route, Routes } from "react-router-dom";
+import { navbar } from "../data/Dummy";
 
 function Router() {
   return (
